@@ -22,9 +22,9 @@ namespace ejercicio1
             Console.Write("Introduce el segundo número: ");
             num2 = Convert.ToInt32(Console.ReadLine());
 
-            Operacion delegadoSumar = Sumar;
+            Operacion delegado = Sumar;
 
-            Console.WriteLine("La suma es: " + delegadoSumar(num1, num2) );
+            Console.WriteLine("La suma es: " + delegado(num1, num2) );
         }
     }
 }

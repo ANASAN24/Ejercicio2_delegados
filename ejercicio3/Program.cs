@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ejercicio1
+namespace ejercicio3
 {
     internal class Program
     {
@@ -32,13 +32,16 @@ namespace ejercicio1
             Console.Write("Introduce el segundo número: ");
             num2 = Convert.ToInt32(Console.ReadLine());
 
-            Operacion delegadoSumar = Sumar;
-            Operacion delegadoRestar = Restar;
-            Operacion delegadoMultiplicar = Multiplicar;
+            Operacion delegado;
 
-            Console.WriteLine("La suma es: " + delegadoSumar(num1, num2));
-            Console.WriteLine("La resta es: " + delegadoRestar(num1, num2));
-            Console.WriteLine("La multiplicación es: " + delegadoMultiplicar(num1, num2));
+            delegado = Sumar; 
+            Console.WriteLine("La suma es: " + delegado(num1, num2));
+
+            delegado = Restar;
+            Console.WriteLine("La resta es: " + delegado(num1, num2));
+
+            delegado = Multiplicar;
+            Console.WriteLine("La multiplicación es: " + delegado(num1, num2));
         }
     }
 }
